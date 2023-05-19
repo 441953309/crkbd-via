@@ -74,7 +74,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
   if (!is_keyboard_master()) {
-    return OLED_ROTATION_90;  // flips the display 180 degrees if offhand
+    return OLED_ROTATION_180;  // flips the display 180 degrees if offhand
   } else {
     return OLED_ROTATION_270;
   }
@@ -105,7 +105,6 @@ void oled_render_layer_state(void) {
             break;
     }
 }
-
 
 char keylog_str[24] = {};
 
